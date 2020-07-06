@@ -1,0 +1,19 @@
+.myForm input, .myForm textarea, .myForm select {
+    width: 400px;
+    height: 30px;
+    padding: 5px 5px;
+    display: block;
+    margin: 20px 0px;
+    font-size:16px;
+    border-radius: 8px;
+}
+.myForm select {
+    width: 410px;
+    height: 40px;
+}
+.myForm textarea {
+    height: 80px;
+}
+.myForm input:focus, .myForm textarea:focus, .myForm select:focus {
+    outline: 0;
+}
