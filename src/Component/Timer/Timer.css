@@ -1,0 +1,28 @@
+.App-content {
+    padding: 30px 50px;
+    background-color: #422525;
+    border-radius: 20px;
+    box-shadow: 0px 2px 15px 6px #5d5b5b;
+  }
+  
+  .App-content h2 {
+    font-size: 22px;
+  }
+  
+  .App-content .Btn {
+    background-color: #948989;
+    border: 1px solid #948989;
+    margin: 0px 12px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    color: #eee;
+    font-weight: bold;
+  }
+  
+  .App-content .Btn:focus {
+    outline : 0;
+  }
+  
+  .Container {
+    margin-bottom: 20px;
+  }

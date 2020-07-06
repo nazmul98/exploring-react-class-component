@@ -1,0 +1,50 @@
+import React from 'react';
+import './Timer.css'
+
+class Timer extends React.Component {
+    state = {
+        count: 0
+    }
+    increament = () => {
+        this.setState({ count: this.state.count + 1 });
+    }
+    decreament = () => {
+        if (this.state.count > 0) {
+            this.setState({ count: this.state.count - 1 });
+        }
+    }
+    intervalId = null;
+    startTimer = () => {
+        if (this.state.count > 0 && !this.intervalId) {
+            this.intervalId = setInterval(() => {
+                this.setState({ count: this.state.count - 1 }, () => {
+                    if (this.state.count === 0) {
+                        alert("Timer Finised");
+                        clearInterval(this.intervalId);
+                        this.intervalId = null;
+                    }
+                })
+            }, 1000)
+        }
+    }
+    render() {
+        return (
+
+            <div className="App-content">
+                <h2>State in Class Component</h2>
+                <div className="Container">
+                    <button onClick={this.decreament} className="Btn">-</button>
+                    <span>{this.state.count}</span>
+                    <button onClick={this.increament} className="Btn">+</button>
+                </div>
+                <div className="Container">
+                    <button onClick={this.startTimer} className="Btn">Start</button>
+                    <button className="Btn">Stop</button>
+                    <button className="Btn">Reset</button>
+                </div>
+            </div>
+        );
+    }
+}
+
+export default Timer;
