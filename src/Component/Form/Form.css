@@ -17,3 +17,11 @@
 .myForm input:focus, .myForm textarea:focus, .myForm select:focus {
     outline: 0;
 }
+button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: cornflowerblue;
+}
