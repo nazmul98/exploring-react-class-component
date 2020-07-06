@@ -1,0 +1,11 @@
+.Container input {
+    margin-top: 20px;
+    width: 300px;
+    padding: 8px 8px;
+    border: 1px solid #282C34;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.Container input:focus {
+    outline: none;
+}

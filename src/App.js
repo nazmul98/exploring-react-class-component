@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Timer from './Component/Timer/Timer'
+import Timer from './Component/Timer/Timer';
+import Event from './Component/Event/Event';
 
 class App extends React.Component {
   render() {
@@ -8,6 +9,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
             <Timer />
+            <Event />
         </header>
       </div>
     );
