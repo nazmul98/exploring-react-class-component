@@ -17,7 +17,8 @@
     border-radius: 8px;
     color: #eee;
     font-weight: bold;
-  }
+    display: inline-block;
+}
   
   .App-content .Btn:focus {
     outline : 0;
