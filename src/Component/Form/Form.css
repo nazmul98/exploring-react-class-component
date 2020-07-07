@@ -24,4 +24,12 @@ button {
     color: white;
     font-size: 16px;
     background-color: cornflowerblue;
+    display: block;
+    margin: 0 auto;
+}
+.myForm input[type = "radio"], .myForm input[type = "checkbox"]{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
 }
