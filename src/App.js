@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Timer from './Component/Timer/Timer';
 import Event from './Component/Event/Event';
+import ReduxConcept from "./Component/ReduxConcept/ReduxConcept";
 import UncontrolledForm from './Component/UncontrolledForm/UncontrolledForm';
 import ControlledForm from './Component/Controlled/Controlled';
 import {
@@ -27,6 +28,9 @@ class App extends React.Component {
                 </Route>
                 <Route path="/controlled">
                   <ControlledForm />
+                </Route>
+                <Route path="/simpleredux">
+                  <ReduxConcept />
                 </Route>
                 <Route path="/">
                   <Timer />
