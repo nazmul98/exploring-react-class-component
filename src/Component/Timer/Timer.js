@@ -1,5 +1,6 @@
 import React from 'react';
-import './Timer.css'
+import './Timer.css';
+import { connect } from "react-redux";
 
 class Timer extends React.Component {
     state = {
@@ -34,7 +35,7 @@ class Timer extends React.Component {
         }
     }
     resetTimer = () => {
-        this.setState({count: 0});
+        this.setState({ count: 0 });
         clearInterval(this.intervalId);
         this.intervalId = null;
     }
@@ -42,6 +43,11 @@ class Timer extends React.Component {
         return (
 
             <div className="App-content">
+                <h2>From Redux Store: {this.props.count}</h2>
+                <div style={{ display: 'flex' }}>
+                    <button style={{ marginRight:'10px' }} onClick={() => this.props.add()}>ReduxPlus +</button>
+                    <button onClick={() => this.props.sub()}>ReduxMinus -</button>
+                </div>
                 <h2>State in Class Component</h2>
                 <div className="Container">
                     <button onClick={this.decreament} className="Btn">-</button>
@@ -58,4 +64,21 @@ class Timer extends React.Component {
     }
 }
 
-export default Timer;
+const mapStateToProps = (state) => {
+    return {
+        count: state.count
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        add: () => {
+            dispatch({ type: "ADD" })
+        },
+        sub: () => {
+            dispatch({ type: "SUB" })
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Timer);
