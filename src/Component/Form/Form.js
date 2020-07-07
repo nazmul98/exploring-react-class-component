@@ -35,7 +35,7 @@ class Form extends React.Component {
     render () {
         return(
             <div className="Container myForm">
-                <h2>Form Handling in React</h2>
+                <h2>Form Elements in React</h2>
                 <input 
                 type="text" 
                 name="name" 
@@ -77,17 +77,6 @@ class Form extends React.Component {
                 Female
 
                 <div style={{ margin: '20px 0px' }}>
-                    <label htmlFor="#agree">Are You Agree?</label>
-                    <input 
-                    type="checkbox"
-                    id="agree" 
-                    name="agree" 
-                    checked={this.state.agree}
-                    onChange = {this.handleCheckbox}
-                    />
-                </div>
-
-                <div style={{ margin: '20px 0px' }}>
                     <label htmlFor="#agree">Skills:- </label>
                     <input 
                     type="checkbox"
@@ -113,6 +102,17 @@ class Form extends React.Component {
                     onChange = {this.handleSkills}
                     />
                     Python
+                </div>
+                
+                <div style={{ margin: '20px 0px' }}>
+                    <label htmlFor="#agree">Are You Agree?</label>
+                    <input 
+                    type="checkbox"
+                    id="agree" 
+                    name="agree" 
+                    checked={this.state.agree}
+                    onChange = {this.handleCheckbox}
+                    />
                 </div>
 
                 <button onClick={this.handleClick}>Show Data</button>
