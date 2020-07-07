@@ -14,6 +14,7 @@ class UncontrolledForm extends React.Component {
     render () {
         return(
             <div className="Container myForm">
+                <h2>Uncontrolled Form</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" name="name" placeholder="Type your name"/>
                     <input type="email" name="email" placeholder="Type your email"/>

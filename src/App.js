@@ -3,6 +3,7 @@ import './App.css';
 import Timer from './Component/Timer/Timer';
 import Event from './Component/Event/Event';
 import UncontrolledForm from './Component/UncontrolledForm/UncontrolledForm';
+import ControlledForm from './Component/Controlled/Controlled';
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +24,9 @@ class App extends React.Component {
                 </Route>
                 <Route path="/uncform">
                   <UncontrolledForm />
+                </Route>
+                <Route path="/controlled">
+                  <ControlledForm />
                 </Route>
                 <Route path="/">
                   <Timer />
