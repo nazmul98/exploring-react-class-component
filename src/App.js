@@ -6,6 +6,7 @@ import Event from './Component/Event/Event';
 import ReduxConcept from "./Component/ReduxConcept/ReduxConcept";
 import UncontrolledForm from './Component/UncontrolledForm/UncontrolledForm';
 import ControlledForm from './Component/Controlled/Controlled';
+import SignUp from './Component/SignUp/SignUp';
 // for connecting redux
 import { Provider } from 'react-redux';
 import store from "./store";
@@ -34,6 +35,9 @@ class App extends React.Component {
                   </Route>
                   <Route path="/controlled">
                     <ControlledForm />
+                  </Route>
+                  <Route path="/signup">
+                    <SignUp />
                   </Route>
                   <Route path="/simpleredux">
                     <ReduxConcept />

@@ -17,7 +17,7 @@
 .myForm input:focus, .myForm textarea:focus, .myForm select:focus {
     outline: 0;
 }
-button {
+.myForm button[type = "submit"] {
     padding: 8px 20px;
     border: none;
     border-radius: 10px;
@@ -32,4 +32,8 @@ button {
     width: 20px;
     height: 20px;
     margin: 0px 5px;
+}
+
+.myForm button[type = "submit"]:disabled {
+    background-color: rgb(100, 118, 153);
 }

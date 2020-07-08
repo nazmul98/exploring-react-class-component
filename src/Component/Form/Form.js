@@ -115,7 +115,7 @@ class Form extends React.Component {
                     />
                 </div>
 
-                <button onClick={this.handleClick}>Show Data</button>
+                <button type="submit" onClick={this.handleClick}>Show Data</button>
             </div>
         );
     }
