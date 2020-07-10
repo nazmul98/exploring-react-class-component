@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+
 // Connect child Component
 import Timer from './Component/Timer/Timer';
 import Event from './Component/Event/Event';
@@ -7,21 +8,14 @@ import ReduxConcept from "./Component/ReduxConcept/ReduxConcept";
 import UncontrolledForm from './Component/UncontrolledForm/UncontrolledForm';
 import ControlledForm from './Component/Controlled/Controlled';
 import SignUp from './Component/SignUp/SignUp';
-// for connecting redux
-import { Provider } from 'react-redux';
-import store from "./store";
+
 // react router
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router,Switch,Route } from "react-router-dom";
 import Form from './Component/Form/Form';
 
 class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
         <div className="App">
           <header className="App-header">
             <Router>
@@ -51,7 +45,6 @@ class App extends React.Component {
             </Router>
           </header>
         </div>
-      </Provider>
     );
   }
 }
